@@ -85,9 +85,30 @@ def lambda_handler(event, context):
 
 ## **Load Testing Using Postman**
 
+I ran a round of load testing in Postman to pinpoint the sweet spot for Lambda memory allocation and the results made one thing very clear: More memory can actually mean better cost efficiency.
+
+### 128 MB (Baseline)
 <img width="1708" height="907" alt="image" src="https://github.com/user-attachments/assets/baddbfac-d89b-4bbf-bf26-f60df0cde4ac" />
 
+ • Avg response time: 546 ms
+ • Throughput: 4.23 req/sec
+ • Felt sluggish and inconsistent under load
+
+
 <img width="962" height="756" alt="image" src="https://github.com/user-attachments/assets/6a27d99e-cdde-4b7b-ac80-7fed3e468dac" />
+
+### 1024 MB (Optimized)
+
+<img width="1687" height="598" alt="image" src="https://github.com/user-attachments/assets/72905df1-3a57-471f-ac0f-a4f5eb1a681e" />
+
+
+ • Avg response time: 300 ms
+ • 45% faster
+ • Noticeably smoother and far more stable
+
+
+And the performance gap? Absolutely eye-opening.
+
 
 
 ## **Conclusion**
